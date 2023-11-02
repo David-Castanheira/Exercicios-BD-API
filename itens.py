@@ -5,10 +5,10 @@ engine = create_engine('sqlite:///rpg.db')
 class ItemNaoExisteException(Exception):
     pass
 
-def consultar_item(id_i):
+def consultar_item(id_item):
     with engine.connect() as con:
         statement = text("""SELECT * FROM Item WHERE id = :item""")
-        rs = con.execute(statement, item=id_i)
+        rs = con.execute(statement, item=id_item)
         itens = rs.fetchall()
         if itens == []:
             raise ItemNaoExisteException

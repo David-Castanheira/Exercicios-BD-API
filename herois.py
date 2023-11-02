@@ -7,23 +7,23 @@ class HeroiNaoExisteException(Exception):
 
 #funções adicionais implementadas abaixo
 
-def heroi_existe(id_h):
+def heroi_existe(id_heroi):
     with engine.connect() as con:  #conecta no meu banco de dados
         #query com "buraco" com o nome heroi    
         statement = text ('SELECT * FROM Heroi WHERE id = :heroi')
         # :jogador -> buraco que vai ser preenchido quando eu chamar con.execute
         # :jogador -> O ":" marca o buraco. Sem ":" nao tem buraco, e coisas estranhas vao acontecer
        
-        rs = con.execute(statement, heroi=id_h) #e usei esse buraco
+        rs = con.execute(statement, heroi=id_heroi) #e usei esse buraco
         herois = rs.fetchall()                 #pega todos os resultados
         if herois == []:                       #se nao tinha nenhuma linha
             return False
         return True
 
-def consultar_heroi(id_h):
+def consultar_heroi(id_heroi):
     with engine.connect() as con: 
         statement = text ("""SELECT * FROM Heroi WHERE id = :heroi""")
-        rs = con.execute(statement, heroi=id_h)
+        rs = con.execute(statement, heroi=id_heroi)
         herois = rs.fetchall()
         if herois == []:
             raise HeroiNaoExisteException

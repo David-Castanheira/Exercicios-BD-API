@@ -102,6 +102,7 @@ no arquivo herois
 '''
 def heroi_pronto_por_nome(nome_heroi):
     dict_heroi = herois.consulta_por_nome(nome_heroi)
+    dict_heroi['vida'] = dict_heroi['fisico'] * 10
     return dict_heroi
 '''
 Ex5 (ainda no model.py)
@@ -133,7 +134,7 @@ Repare que a funcao recebe dicionários, e nem fala com o SQL
 
 
 def atacar_com_fisico(atacante, defensor):
-   pass 
+   defensor['vida'] -= atacante['fisico']
 
 '''
 Opcional - não testado
