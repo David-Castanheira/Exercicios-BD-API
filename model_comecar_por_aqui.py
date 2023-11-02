@@ -100,13 +100,13 @@ fazer a funcao abaixo - pode ser útil definir uma
 nova função de acesso ao banco, chamada consultar_heroi_por_nome,
 no arquivo herois
 '''
-def heroi_pronto_por_nome(nomeHeroi):
-    dict_heroi = herois.consulta_por_nome(nomeHeroi)
+def heroi_pronto_por_nome(nome_heroi):
+    dict_heroi = herois.consulta_por_nome(nome_heroi)
     return dict_heroi
 '''
 Ex5 (ainda no model.py)
 Melhore sua funcao heroi_pronto_por_nome. Agora, o dicionario também
-incluirá o a chave vida. O valor da vida de um heroi é inicializado
+incluirá a chave vida. O valor da vida de um heroi é inicializado
 com seu fisico multiplicado por 10
 
 (fazer a funcao nesse arquivo - na verdade, melhorar a função

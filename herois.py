@@ -29,3 +29,12 @@ def consultar_heroi(id_h):
             raise HeroiNaoExisteException
         return dict(herois[0])
 
+def consulta_por_nome(nome_heroi):
+    with engine.connect() as con:
+        statement = text ("""SELECT * FROM Heroi WHERE nome = :name""")
+        rs = con.execute(statement, name=nome_heroi)
+        nomes_heroi = rs.fetchall()
+        if nomes_heroi == []:
+            raise HeroiNaoExisteException
+        return dict(nomes_heroi[0])
+
