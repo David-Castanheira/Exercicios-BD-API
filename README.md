@@ -2,7 +2,7 @@
 
 
 # Sobre o projeto
-Projeto desenvolvido durante o 3° semestre do curso de ADS na Faculdade Impacta, referente à disciplina de API's e microsserviços que se trata da resolução de exercícios, simulando o universo RPG. Ainda está em processo de melhora e inclusão de novas funcionalidades e fianlização do restante dos exercícios.
+Projeto desenvolvido durante o 3° semestre do curso de ADS na Faculdade Impacta, referente à disciplina de API's e microsserviços que se trata da resolução de exercícios, simulando o universo RPG. Ainda está em processo de melhora e inclusão de novas funcionalidades e finalização do restante dos exercícios.
 
 ## Objetivo 
 Exercícios elaborados pelo próprio professor da disciplina referentes ao consumo da API de heróis, seus respectivos poderes e itens coletados durante o percurso. 
